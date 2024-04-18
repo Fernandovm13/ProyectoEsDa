@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Moda Tuxtleca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon" href="IconoAdmin.jpeg">
+</head>
+<body>
+    <header id="header">
+        <h1>Panel de Administración</h1>
+    </header>
+    <main class="container">
+        <h2>Agregar Nuevo Producto</h2>
+        <form id="addProductForm">
+            <input type="text" id="adminProductName" placeholder="Nombre del producto" required>
+            <input type="number" id="adminProductPrice" placeholder="Precio del producto" required>
+            <input type="file" id="adminProductImage" accept="image/*" required>
+            <select id="adminProductCategory" required>
+                <option value="">Selecciona una categoría</option>
+                <option value="hombre">Hombre</option>
+                <option value="niño">Niño</option>
+                <option value="niña">Niña</option>
+                <option value="mujer">Mujer</option>
+            </select>
+            <button type="button" onclick="addProductAdmin()">Agregar Producto</button>
+        </form>
+
+        <h2>Eliminar Productos</h2>
+        <div id="productListAdmin"></div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

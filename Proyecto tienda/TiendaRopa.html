@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Tuxtleca</title>
+    <link rel="icon" href="IconoTienda.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="TiendaRopa.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Moda Tuxtleca</h1>
+    </header>
+    <main>
+        <div id="options" class="center-container">
+            <div class="options">
+                <button onclick="showAdminLogin()"><i class="fas fa-user-cog"></i></button>
+                <button onclick="showCustomerPage()"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+        <div id="adminLogin" class="hidden">
+            <h2>Inicio de Sesión de Administrador</h2>
+            <form>
+                <input type="text" id="adminUsername" placeholder="Usuario" required>
+                <input type="password" id="adminPassword" placeholder="Contraseña" required>
+                <button type="button" onclick="loginAdmin()">Iniciar Sesión</button>
+            </form>
+        </div>
+        <div id="customerPage" class="hidden">
+            <h2>Bienvenido</h2>
+            <div id="navbar" class="navbar hidden">
+                <button onclick="showCategory('niño')">Niño</button>
+                <button onclick="showCategory('niña')">Niña</button>
+                <button onclick="showCategory('mujer')">Mujer</button>
+                <button onclick="showCategory('hombre')">Hombre</button>
+                <button onclick="goToCart()">Carrito</button>
+            </div>
+            <div class="product-list"></div>
+            <div id="cart" class="hidden">
+            </div>
+        </div>
+    </main>
+
+    <script src="TiendaRopa.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("navbar").classList.add("hidden");
+            loadProducts(); // Cargar productos al inicio
+        });
+    </script>
+</body>
+</html>

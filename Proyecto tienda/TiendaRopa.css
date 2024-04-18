@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Agregamos el fondo de imagen */
+    background-image: url('FondoTienda.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    padding: 20px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px; /* Espacio entre el título y los botones */
+}
+
+.options button {
+    width: 200px; /* Ancho del botón */
+    height: 200px; /* Alto del botón */
+    font-size: 36px; /* Tamaño del icono */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin: 10px; /* Espaciado entre botones */
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options button i {
+    display: block;
+}
+
+.options button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre los productos */
+}
+
+.product {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animación de zoom */
+    cursor: pointer;
+    text-align: center; /* Alineación del contenido */
+    overflow: hidden; /* Ocultar partes de la imagen fuera del contenedor */
+}
+
+.product:hover {
+    transform: scale(1.1); /* Zoom al pasar el cursor */
+}
+
+.product img {
+    width: 100%; /* Imágenes del mismo ancho */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajuste de imagen para cubrir el contenedor */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Animación de zoom */
+}
+
+.product:hover img {
+    transform: scale(1.2); /* Zoom al pasar el cursor */
+}
+
+.product h3,
+.product p {
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif; /* Cambia la fuente a Montserrat u otra fuente llamativa */
+    font-weight: bold; /* Ajusta el peso de la fuente según tu preferencia */
+    color: #333; /* Color del texto */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-button, .cart-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover, .cart-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la barra de categorías */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0; /* Ajuste del espacio arriba y abajo */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones de categorías */
+}
+
+.navbar button {
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el formulario de login */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Fondo difuminado con colores llamativos */
+    background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#username-input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    text-align: center;
+}
+
+#password-input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    text-align: center;
+}
+
+#login-button {
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#login-button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    text-align: center; 
+    font-size: 36px; 
+    margin-top: 50px; 
+    font-family: 'Cursive', sans-serif; 
+    font-weight: bold; 
+    color: #333; 
+    font-style: italic;
+}
